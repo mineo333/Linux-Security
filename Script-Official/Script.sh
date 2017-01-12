@@ -30,6 +30,34 @@ cd
 #Now all programs from the checklist are installed (Please post an issue if you see one more,it would be greatly appreciated)
 #Now will be a menu to run all programs that were previously installed
 #Other Linux commands run to make the system more secure
+select opt in Gufw chkrootkit Lynis Listen_Ports Quit
+do
+    case $opt in
+        Gufw)
+            echo "You chose run GUFW"
+            sleep 3
+			cd ~
+			sudo gufw
+            ;;
+        chkrootkit)
+            echo "you chose to run chrootkit"
+			cd ~
+			sudo chkrootkit
+            ;;
+        Lynis)
+            echo "you chose to run Lynis"
+			cd ~
+			cd /usr/local
+			cd lynis
+			sudo ./lynis audit system
+			echo You may run this as many times as you want to keep track of security problems
+			sleep 5
+           ;;
+	Quit)
+			break
 
+	   ;;
+    esac
+done
 
 #This is the end of the menu
