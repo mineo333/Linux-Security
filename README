@@ -1,0 +1,12 @@
+Welcome to the Cyberpatriot Script
+Developer: Sharad
+Team: Andrew
+Directions:
+To use this script first start out with running Script.sh
+This will download all the nessacary files from the the Cyberpatrtiot checklist
+To run the script do:
+sh (Filename).sh
+However, if you already have run Script.sh, and want to get back to the menu run Shortcut.sh instead.
+This will skip all the downloading and will get right to the menu
+Also, when you run 4 it will make a ports.txt file. This will contain all of the port information
+Good Luck!
