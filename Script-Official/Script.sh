@@ -1,13 +1,13 @@
 #!/bin/bash 
 #All of the stuff below is just install and WILL earn points
 echo Welcome to the Linux Security Cleaner
-echo  DON'T FORGET TO ;):
+echo  DON'T FORGET TO
 echo Copy the README
 echo Update Users according to README
 echo Write down password if changed
 echo Change passwords
 echo Look for malicious software
-echo Good Luck :)
+echo Good Luck
 sleep 10
 sudo apt-get upgrade
 sudo apt-get update
@@ -53,6 +53,15 @@ do
 			echo You may run this as many times as you want to keep track of security problems
 			sleep 5
            ;;
+	    "Listen Ports")
+	cd ~
+	cd Desktop
+	cd Script_Stuff
+            cat /etc/services > ports.txt 
+	      echo Ports were copied
+            sleep 3
+	     cat /etc/services | less > ports.txt 
+            ;;
 	Quit)
 			break
 
