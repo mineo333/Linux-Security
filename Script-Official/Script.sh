@@ -30,7 +30,7 @@ cd
 #Now all programs from the checklist are installed (Please post an issue if you see one more,it would be greatly appreciated)
 #Now will be a menu to run all programs that were previously installed
 #Other Linux commands run to make the system more secure
-select opt in Gufw chkrootkit Listen_Ports Quit
+select opt in Gufw chkrootkit Listen_Ports Quit DeleteMedia
 do
     case $opt in
         Gufw)
@@ -46,12 +46,28 @@ do
             ;;
      
            
-	    "Listen_Ports")
+	    Listen_Ports)
 	
             cat /etc/services > ports.txt 
 	      echo Ports were copied
            
             ;;
+	    DeleteMedia)
+
+find / -name "*.mp3" -type f -delete
+find / -name "*.wav" -type f -delete
+find / -name "*.wmv" -type f -delete
+find / -name "*.mp4" -type f -delete
+find / -name "*.mov" -type f -delete
+find / -name "*.avi" -type f -delete
+find / -name "*.mpeg" -type f -delete
+find /home -name "*.jpeg" -type f -delete
+find /home -name "*.jpg" -type f -delete
+find /home -name "*.png" -type f -delete
+find /home -name "*.gif" -type f -delete
+find /home -name "*.tif" -type f -delete
+find /home -name "*.tiff" -type f -delete
+;;
 	Quit)
 			break
 
