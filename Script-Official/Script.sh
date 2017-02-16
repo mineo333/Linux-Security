@@ -9,6 +9,8 @@ echo Change passwords
 echo Look for malicious software
 echo Good Luck
 sleep 3
+sudo apt-get purge gnome
+sudo apt-get purge ubuntu-desktop -y
 sudo apt-get upgrade
 sudo apt-get update
 sudo apt-get autoremove
